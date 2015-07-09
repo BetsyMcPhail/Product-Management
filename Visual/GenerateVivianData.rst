@@ -1,8 +1,5 @@
-.. title: Generate VIVIAN Backend Data
-
-======================================
 Generate VIVIAN Backend Data
-======================================
+============================
 
 FileMan Global Data Parser
 ---------------------------
@@ -13,10 +10,7 @@ https://github.com/OSEHRA-Sandbox/VistA
 
 Branch: VistADataParse
 
-Go to:
- Utilities/Dox/PythonScripts directory:
-
-Run::
+From the **Utilities/Dox/PythonScripts** directory run::
 
   python FileManGlobalDataParser.py -h
 
@@ -42,16 +36,20 @@ Run::
     -pr PATCHREPOSITDIR, --patchRepositDir PATCHREPOSITDIR
                           VistA Git Repository Directory
 
+
 To generate Backend Data for HL7/RPC as well as VistA Menus.d
 
 Please run::
-    python FileManGlobalDataParser.py -outdir </path/to/outdir> -all \
-                                                                         -mr </path/to/VistA-M/repository> \
-                                                                         -pr </path/to/VistA/repository> \
-                                                                         <101> <8994> <19>
+
+  python FileManGlobalDataParser.py -outdir </path/to/outdir> -all 
+                                    -mr </path/to/VistA-M/repository> 
+                                    -pr </path/to/VistA/repository>
+                                    <101> <8994> <19>
+
 Where 101, 8994, 19 are the fileman numbers for protocol, RPC and options respectively.
 
 Please also replace the path accordingly.
+
 
 Create Packages.csv
 -------------------
@@ -61,8 +59,8 @@ From the Scripts repository run ::
   python PopulatePackages.py 
 
 
-Link backend data with VIVIAN.
----------------------------
+Link backend data with VIVIAN
+-----------------------------
 
 Get VIVIAN Code repository:
 
@@ -90,7 +88,9 @@ Next, run a Python script to create menu_autocomplete.json.
   python menu_autocomplete_gen.py 
 
 Requires:  Visual/menus
+
 Creates: menu_autocomplete.json
+
 Used By: vista_menus.php
 
 
@@ -102,7 +102,9 @@ Create PackageInterface.csv
   python pkg_interface_gen.py 
 
 Requires:  Visual/files 
+
 Creates: PackageInterface.csv
+
 Used By: pkgcsv_to_json.py
 
 
@@ -113,7 +115,9 @@ Create packages.json
   python pkgcsv_to_json.py
 
 Requires: Packages.csv, PackageInterface.csv, PackageCategories.json
+
 Creates: packages.json
+
 Used By: prod_visual.html
 
 Create pkgdep.json
@@ -122,7 +126,7 @@ Create pkgdep.json
 Used by: package_dep_bar_chart.html, package_stats_chart.html,
 pkgdep_chart_data.py, vista_pkg_dep.php, vistadep.html
 
-===========
+
 DSS vxVistA
 ============
 
