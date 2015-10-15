@@ -49,7 +49,7 @@
       height: 'auto',
       width: 500,
       modal: true,
-      position: ["center","center-50"],
+      position: ["center", 150],
       title: "About VIVIAN"
     };
     $('#dialog-modal-about').dialog(overlayDialogObj).show();
