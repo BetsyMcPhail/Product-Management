@@ -8,6 +8,11 @@ def generate_packages_json():
   generate_output_json_dict(pkgCatJson)
   with open("packages.json", 'w') as outputFile:
     json.dump(pkgCatJson, outputFile)
+  with open("packages_autocomplete.json", 'w') as autocompleteOutputFile:
+    packageNames = list(pkgNameSet)
+    packageNames.sort()
+    json.dump(packageNames, autocompleteOutputFile)
+
 
 pkgNameSet = set()
 pkgPosNamePrefixes = dict()
