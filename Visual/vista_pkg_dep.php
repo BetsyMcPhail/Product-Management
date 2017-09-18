@@ -89,7 +89,7 @@
   d3.json("PackageCategories.json", function(error, data) {
     var categories = data;
     function getPackageDoxLink(node) {
-      var package_link_url = "http://code.osehra.org/dox/Package_";
+      var package_link_url = "files/dox/Package_";
       var doxLinkName = node.name.replace(/ /g, '_').replace(/-/g, '_')
       return package_link_url + doxLinkName + ".html";
     }

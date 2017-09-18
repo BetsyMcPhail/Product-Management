@@ -93,7 +93,7 @@
       categories: [],
       labels: {
         formatter: function (){
-          var package_link_url = "http://code.osehra.org/dox/";
+          var package_link_url = "files/dox/";
           var doxLinkName = this.value.replace(/ /g, '_').replace(/-/g, '_')
           var lnkUrl = package_link_url + "Package_" + doxLinkName + ".html";
           return "<a href=\"" + lnkUrl + "\"" + " target=\"_blank\"" + ">" + this.value + "</a>";

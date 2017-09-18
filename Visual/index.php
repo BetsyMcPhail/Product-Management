@@ -100,15 +100,15 @@ $("#accordion").accordion({heightStyle: 'content', collapsible: true}).hide();
 
 <?php include_once "vivian_tree_layout_common.js" ?>
 
-var package_link_url = "http://code.osehra.org/dox/";
+var package_link_url = "files/dox/";
 var toolTip = d3.select(document.getElementById("toolTip"));
 var header = d3.select(document.getElementById("header1"));
 var selectedIndex = 0;
 var distProp = [ // constants to store property of each distribution
   { name: "All", color: "black", distribution: 'All', doxlink: package_link_url},
   { name: "OSEHRA", color: "#FF0000", distribution: 'OSEHRA VistA', doxlink: "http://code.osehra.org/OSEHRA_dox/"},
-  { name: "VA", color: "#3300CC", distribution: 'VA FOIA VistA' ,doxlink: package_link_url},
-  { name: "DSS", color: "#080", distribution: 'DSS vxVistA' , doxlink: "http://code.osehra.org/dox_alpha/vxvista/"}
+  { name: "VA", color: "#3300CC", distribution: 'VA FOIA VistA', doxlink: "http://code.osehra.org/dox/"},
+  { name: "DSS", color: "#080", distribution: 'DSS vxVistA', doxlink: "http://code.osehra.org/dox_alpha/vxvista/"}
 
   /**
   ,{
