@@ -13,7 +13,7 @@
           event.preventDefault();
         });
         $('#navigation_buttons li').each(function (i) {
-          if (i === 4) {
+          if (i === 7) {
             $(this).removeClass("active").addClass("active");
           }
           else {
